@@ -70,7 +70,7 @@ spec:
   initContainers:
     - name: init-container
       image: "ap-chuncheon-1.ocir.io/apackrsct01/apm-java-agent-installer:1.7.2733"
-      command: ["sh", "-c", "java -jar ./apm-java-agent-installer-1.7.2733.jar provision-agent -service-name=carts -destination=/etc/shared -private-data-key=$(PRIVATE_DATA_KEY) -data-upload-endpoint=$(DATA_UPLOAD_ENDPOINT)"]
+      command: ["sh", "-c", "java -jar ./apm-java-agent-installer-1.7.2733.jar provision-agent -service-name=orders -destination=/etc/shared -private-data-key=$(PRIVATE_DATA_KEY) -data-upload-endpoint=$(DATA_UPLOAD_ENDPOINT)"]
       volumeMounts:
       - name: provisioned-apm
         mountPath: /etc/shared
