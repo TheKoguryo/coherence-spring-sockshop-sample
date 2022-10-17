@@ -27,8 +27,8 @@ spec:
     args:
       - "--port=8080"
       - "--spring.zipkin.enabled=true"
-      - "--spring.zipkin.base-url=https://aaaada6pytoaaaaaaaaaaabfsy.apm-agt.ap-chuncheon-1.oci.oraclecloud.com"
-      - "--spring.zipkin.api-path=/20200101/observations/private-span?dataFormat=zipkin&dataFormatVersion=2&dataKey=KBJE3XL7IPH7V46DDDMWWYSHUIWQN77I"
+      - "--spring.zipkin.base-url=$(DATA_UPLOAD_ENDPOINT)"
+      - "--spring.zipkin.api-path=/20200101/observations/private-span?dataFormat=zipkin&dataFormatVersion=2&dataKey=$(PRIVATE_DATA_KEY)"
       - "--coherence.server.startup-timeout=5m"
   jvm:
     memory:
